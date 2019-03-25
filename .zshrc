@@ -25,6 +25,7 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs battery date)
 POWERLEVEL9K_DATE_FORMAT='%D{%m/%d %H:%M}'
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-autosuggestions"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
 zplug "zsh-users/zsh-completions"
 
 if ! zplug check; then
