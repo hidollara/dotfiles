@@ -27,6 +27,7 @@ zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-autosuggestions"
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
 zplug "zsh-users/zsh-completions"
+zplug "paulirish/git-open"
 
 if ! zplug check; then
   zplug install
