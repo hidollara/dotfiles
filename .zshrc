@@ -13,6 +13,7 @@ zplug "mollifier/cd-gitroot"
 zplug "b4b4r07/httpstat", as:command, use:'(*).sh', rename-to:'$1'
 zplug "$ZDOTDIR/tmux-template", from:local, as:command, use:'(*).sh', rename-to:'$1'
 
+if ! zplug check; then zplug install; fi
 zplug load
 
 autoload -U compinit; compinit
