@@ -1,6 +1,5 @@
 source ${ZPLUG_HOME}/init.zsh
 
-export LSCOLORS=exfxcxdxbxegedabagacad
 alias ls="ls -AGF"
 alias l="ls"
 alias mkdir="mkdir -p"

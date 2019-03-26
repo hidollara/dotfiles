@@ -27,3 +27,6 @@ eval "$(rbenv init -)"
 export GOPATH=$HOME/go/package:$HOME/go/workspace
 export PATH=$HOME/go/package/bin:$HOME/go/workspace/bin:$PATH
 
+export TERM="xterm-256color"
+export LSCOLORS=exfxcxdxbxegedabagacad
+
