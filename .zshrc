@@ -29,6 +29,7 @@ zplug "zsh-users/zsh-completions"
 zplug "paulirish/git-open"
 zplug "mollifier/cd-gitroot"
 alias gitcd=cd-gitroot
+zplug "junegunn/fzf-bin", as:command, from:gh-r, rename-to:fzf
 
 if ! zplug check; then
   zplug install
