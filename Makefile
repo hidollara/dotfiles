@@ -1,7 +1,7 @@
 ZDOTDIR := ${HOME}/.zsh
 
 deploy:
-	zsh -ci "zplug update"
+	zsh -ci "if ! zplug check; then zplug install; fi; zplug update; yes| zplug clean --force"
 
 init: clean
 	{ echo export ZDOTDIR=${ZDOTDIR}; echo 'source $$ZDOTDIR/.zshenv'; } > ~/.zshenv
