@@ -1,10 +1,6 @@
-if [[ -z "$LANG" ]]; then
-  export LANG='en_US.UTF-8'
-fi
+if [[ -z "$LANG" ]]; then export LANG='en_US.UTF-8'; fi
 
-if [[ "$OSTYPE" == darwin* ]]; then
-  export BROWSER='open'
-fi
+if [[ "$OSTYPE" == darwin* ]]; then export BROWSER='open'; fi
 export EDITOR='vi'
 export VISUAL='vi'
 export PAGER='less'
