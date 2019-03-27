@@ -7,11 +7,11 @@ zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "junegunn/fzf-bin", as:command, from:gh-r, rename-to:fzf
-zplug "junegunn/fzf", as:command, use:bin/fzf-tmux
+zplug "junegunn/fzf", as:command, use:bin/fzf-tmux, if:"[ -x \"$(which tmux)\" ]"
 zplug "paulirish/git-open"
 zplug "mollifier/cd-gitroot"
 zplug "b4b4r07/httpstat", as:command, use:'(*).sh', rename-to:'$1'
-zplug "$ZDOTDIR/tmux-template", from:local, as:command, use:'(*).sh', rename-to:'$1'
+zplug "$ZDOTDIR/tmux-template", from:local, as:command, use:'(*).sh', rename-to:'$1' if:"[ -x \"$(which tmux)\" ]"
 
 if ! zplug check; then zplug install; fi
 zplug load
