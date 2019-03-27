@@ -18,8 +18,6 @@ path=(
 
 export ZPLUG_HOME=$ZDOTDIR/zplug
 
-eval "$(rbenv init -)"
-
 export GOPATH=$HOME/go/package:$HOME/go/workspace
 export PATH=$HOME/go/package/bin:$HOME/go/workspace/bin:$PATH
 
