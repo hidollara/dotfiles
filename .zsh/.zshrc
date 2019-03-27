@@ -11,7 +11,7 @@ zplug "junegunn/fzf", as:command, use:bin/fzf-tmux, if:"[ -x \"$(which tmux)\" ]
 zplug "paulirish/git-open"
 zplug "mollifier/cd-gitroot"
 zplug "b4b4r07/httpstat", as:command, use:'(*).sh', rename-to:'$1'
-zplug "$ZDOTDIR/tmux-template", from:local, as:command, use:'(*).sh', rename-to:'$1' if:"[ -x \"$(which tmux)\" ]"
+zplug "hidollara/tmux-template", as:command, use:'(*).sh', rename-to:'$1', if:"[ -x \"$(which tmux)\" ]"
 
 if ! zplug check; then zplug install; fi
 zplug load
