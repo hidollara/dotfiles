@@ -1,4 +1,4 @@
-git clone git@github.com/hidollara/dotfiles ~/.dotfiles
+git clone git@github.com/hidollara/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 make prepare
 make deploy
