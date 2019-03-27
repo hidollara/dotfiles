@@ -1,0 +1,24 @@
+[filter "lfs"]
+	smudge = git-lfs smudge %f
+	required = true
+	clean = git-lfs clean %f
+[user]
+	name = hidollara
+	email = hidollara@users.noreply.github.com
+[core]
+	autocrlf = input
+[alias]
+	st = !git stash list && git status --short --branch
+	ap = add -p
+	unstage = reset HEAD --
+	cm = commit -m
+	cam = commit -am
+	cancel = reset --soft HEAD^
+	glog = log --all --graph --pretty=\"%C(yellow)%h %C(green)%cr %C(red)%d %C(reset)%s\"
+	l = glog
+[fetch]
+	prune = true
+[merge]
+	ff = false
+[pull]
+	ff = only
