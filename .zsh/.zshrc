@@ -28,3 +28,7 @@ alias gitcd="cd-gitroot"
 
 chpwd() { ls }
 
+fd() {
+  local dir=$(find ${1:-.} -path "*/\.git*" -prune -o -type d 2> /dev/null| fzf) && cd "$dir"
+}
+
