@@ -24,3 +24,5 @@ export PATH=$HOME/go/package/bin:$HOME/go/workspace/bin:$PATH
 export TERM="xterm-256color"
 export LSCOLORS=exfxcxdxbxegedabagacad
 
+export GREP_COLOR="0;31"
+
