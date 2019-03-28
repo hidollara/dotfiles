@@ -32,3 +32,8 @@ fd() {
   local dir=$(find ${1:-.} -path "*/\.git*" -prune -o -type d 2> /dev/null| fzf) && cd "$dir"
 }
 
+fsd() {
+  if [ -z $1 ]; then echo "Usage: fsd search-string [dir]"; return; fi
+  local dir=$(grep $1 -rl ${2:-.}| fzf --preview "cat {}| grep --color=always -E \"$1|$\"" ) && cd "$dir"
+}
+
