@@ -1,9 +1,5 @@
-if [[ ! -d ${ZPLUG_HOME} ]]; then
-  curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh| zsh
-fi
 source ${ZPLUG_HOME}/init.zsh
 
-zplug "zplug/zplug", hook-build:"zplug --self-manage"
 zplug "mafredri/zsh-async"
 zplug "sindresorhus/pure", use:pure.zsh, as:theme
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
