@@ -5,13 +5,9 @@ ZDOTDIR := ${HOME}/.zsh
 
 prepare: clean ## Prepare the environment
 	{ echo export ZDOTDIR=${ZDOTDIR}; echo 'source $$ZDOTDIR/.zshenv'; } > ~/.zshenv
-	curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh| zsh;
 
 update: ## Update plugins managed to zplug
 	zsh -ci "zplug update; zplug clean --force"
-
-clean: ## Remove files this created
-	rm -rf $$ZDOTDIR/zplug
 
 help: ## Show all the targets
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) \
