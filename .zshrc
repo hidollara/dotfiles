@@ -1,3 +1,7 @@
+if [[ -x "$(which tmux)" && -z $TMUX ]]; then
+    tmux attach || tmux new-session; exit
+fi
+
 source ~/.zplug/init.zsh
 
 zplug "b4b4r07/enhancd", use:init.sh
