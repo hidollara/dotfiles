@@ -1,5 +1,6 @@
 source ~/.zplug/init.zsh
 
+zplug "b4b4r07/enhancd", use:init.sh
 zplug "b4b4r07/gist", as:command, hook-build:'go get -d && go build'
 zplug "b4b4r07/httpstat", as:command, use:'(*).sh', rename-to:'$1'
 zplug "junegunn/fzf", as:command, use:bin/fzf-tmux, if:'[ -x $(which tmux) ]'
@@ -25,7 +26,7 @@ alias rm="rm -r"
 alias g++="g++ -std=c++11"
 alias gitcd="cd-gitroot"
 
-chpwd() { ls }
+ENHANCD_HOOK_AFTER_CD="l"
 
 fd() {
   local dir=$(find ${1:-.} -path "*/\.git*" -prune -o -type d 2> /dev/null| fzf) && cd "$dir"
