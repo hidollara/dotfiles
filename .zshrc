@@ -1,4 +1,4 @@
-source ${ZPLUG_HOME}/init.zsh
+source ~/.zplug/init.zsh
 
 zplug "mafredri/zsh-async"
 zplug "sindresorhus/pure", use:pure.zsh, as:theme

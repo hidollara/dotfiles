@@ -16,8 +16,6 @@ path=(
   $path
 )
 
-export ZPLUG_HOME=$HOME/.zplug
-
 export GOPATH=$HOME/go/package:$HOME/go/workspace
 export PATH=$HOME/go/package/bin:$HOME/go/workspace/bin:$PATH
 
