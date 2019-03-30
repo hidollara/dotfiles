@@ -26,7 +26,8 @@ alias rm="rm -r"
 alias g++="g++ -std=c++11"
 alias gitcd="cd-gitroot"
 
-ENHANCD_HOOK_AFTER_CD="l"
+export ENHANCD_DISABLE_HOME=1
+export ENHANCD_HOOK_AFTER_CD=ls
 
 fd() {
   local dir=$(find ${1:-.} -path "*/\.git*" -prune -o -type d 2> /dev/null| fzf) && cd "$dir"
