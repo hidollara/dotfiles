@@ -27,6 +27,7 @@ alias g++="g++ -std=c++11"
 alias gitcd="cd-gitroot"
 
 export ENHANCD_DISABLE_HOME=1
+export ENHANCD_DISABLE_DOT=1
 export ENHANCD_HOOK_AFTER_CD=ls
 
 fd() {
