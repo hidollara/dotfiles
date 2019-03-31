@@ -2,7 +2,7 @@ if command -v tmux >/dev/null && [[ -z "$TMUX" ]]; then
     tmux attach || tmux new-session; exit
 fi
 
-export ZPLUG_HOME="$HOME/.cache/zplug"
+export ZPLUG_HOME="$XDG_CACHE_HOME/zplug"
 if [[ ! -d "$ZPLUG_HOME" ]]; then
   git clone https://github.com/zplug/zplug "$ZPLUG_HOME"
 fi

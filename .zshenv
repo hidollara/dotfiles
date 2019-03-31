@@ -8,6 +8,7 @@ export TERM='xterm-256color'
 export LSCOLORS='exfxcxdxbxegedabagacad'
 export GREP_COLOR='0;31'
 export GOPATH="$HOME/go/package:$HOME/go/workspace"
+export XDG_CACHE_HOME="${XDG_CACHE_HOME:=$HOME/.cache}"
 
 typeset -gU cdpath fpath mailpath path
 path=(
