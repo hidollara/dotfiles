@@ -5,7 +5,6 @@ repo = 'Shougo/dein.vim'
 repo = 'w0rp/ale'
 hook_add = '''
   let g:ale_sign_column_always = 1
-  let g:ale_completion_enabled = 1
 '''
 
 [[plugins]]
@@ -22,4 +21,13 @@ hook_add = '''
   highlight GitGutterAdd ctermfg=green
   highlight GitGutterChange ctermfg=yellow
   highlight GitGutterDelete ctermfg=red
+'''
+
+[[plugins]]
+repo='prabirshrestha/async.vim'
+
+[[plugins]]
+repo='prabirshrestha/vim-lsp'
+hook_add = '''
+  let g:lsp_diagnostics_enabled = 0
 '''
