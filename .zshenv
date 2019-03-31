@@ -8,11 +8,14 @@ export TERM='xterm-256color'
 export LSCOLORS='exfxcxdxbxegedabagacad'
 export GREP_COLOR='0;31'
 export GOPATH="$HOME/go/package:$HOME/go/workspace"
+export LDFLAGS="-L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib"
+export CPPFLAGS="-I/usr/local/opt/llvm/include"
 export XDG_CACHE_HOME="${XDG_CACHE_HOME:=$HOME/.cache}"
 
 typeset -gU cdpath fpath mailpath path
 path=(
   $HOME/go/{package,workspace}/bin
+  /usr/local/opt/llvm/bin
   /usr/local/{bin,sbin}
   $path
 )
