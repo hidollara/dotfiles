@@ -36,4 +36,3 @@ set incsearch
 set wildmenu
 set showcmd
 set whichwrap=b,s,h,l,<,>,[,],~
-
