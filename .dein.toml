@@ -10,3 +10,11 @@ hook_add = '''
 
 [[plugins]]
 repo = 'cespare/vim-toml'
+
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+hook_add = '''
+  highlight GitGutterAdd ctermfg=green
+  highlight GitGutterChange ctermfg=yellow
+  highlight GitGutterDelete ctermfg=red
+'''

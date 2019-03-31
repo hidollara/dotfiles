@@ -39,6 +39,7 @@ set smartindent
 set softtabstop=2
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
 set tabstop=2
+set updatetime=250
 set ruler
 set whichwrap=b,s,h,l,<,>,[,],~
 set wildmenu
