@@ -14,6 +14,11 @@ repo = 'cespare/vim-toml'
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
 hook_add = '''
+  if exists('&signcolumn')
+    set signcolumn=yes
+  else
+    let g:gitgutter_sign_column_always = 1
+  endif
   highlight GitGutterAdd ctermfg=green
   highlight GitGutterChange ctermfg=yellow
   highlight GitGutterDelete ctermfg=red
