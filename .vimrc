@@ -2,7 +2,7 @@ let s:dein_dir = $HOME . '/.cache/dein'
 let s:dein_body = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 if &runtimepath !~# '/dein.vim'
   if !isdirectory(s:dein_body)
-    execute '!git clone https://github.com/Shougo/dein.vim' s:dein_body
+    silent execute '!git clone https://github.com/Shougo/dein.vim' s:dein_body
   endif
   execute 'set runtimepath^=' . fnamemodify(s:dein_body, ':p')
 endif
@@ -16,7 +16,7 @@ if dein#load_state(s:dein_dir)
 endif
 
 if dein#check_install()
-  call dein#install()
+  silent call dein#install()
 endif
 
 filetype plugin indent on
