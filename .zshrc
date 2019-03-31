@@ -2,6 +2,10 @@ if [[ -x "$(which tmux)" && -z $TMUX ]]; then
     tmux attach || tmux new-session; exit
 fi
 
+if [[ ! -d ~/.zplug ]]; then
+  git clone https://github.com/zplug/zplug ~/.zplug
+fi
+
 source ~/.zplug/init.zsh
 
 zplug "b4b4r07/enhancd", use:init.sh
