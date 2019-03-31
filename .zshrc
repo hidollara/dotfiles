@@ -15,6 +15,7 @@ zplug 'junegunn/fzf', as:command, use:bin/fzf-tmux, if:'command -v tmux >/dev/nu
 zplug 'junegunn/fzf-bin', as:command, from:gh-r, rename-to:fzf
 zplug 'mafredri/zsh-async', use:async.zsh
 zplug 'mollifier/cd-gitroot'
+zplug "paulirish/git-open", as:command, use:git-open
 zplug 'sindresorhus/pure', use:pure.zsh, as:theme, on:mafredri/zsh-async
 zplug 'hidollara/tmux-template', as:command, use:'(*).sh', rename-to:'$1', if:'command -v tmux >/dev/null'
 zplug 'zsh-users/zsh-autosuggestions'
