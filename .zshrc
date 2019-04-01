@@ -32,6 +32,8 @@ export ENHANCD_DISABLE_HOME=1
 export ENHANCD_DISABLE_DOT=1
 export ENHANCD_HOOK_AFTER_CD=ls
 
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
 alias ls='ls -AGF'
 alias l='ls'
 alias mkdir='mkdir -p'
