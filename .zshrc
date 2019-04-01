@@ -38,7 +38,6 @@ alias ls='ls -AGF'
 alias l='ls'
 alias mkdir='mkdir -p'
 alias rm='rm -r'
-alias g++='g++ -std=c++11'
 alias gitcd='cd-gitroot'
 
 fd() {
