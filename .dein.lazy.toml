@@ -1,3 +1,7 @@
 [[plugins]]
 repo = 'lervag/vimtex'
 on_ft = ['tex']
+hook_source = '''
+  let g:vimtex_view_general_viewer = 'displayline'
+  let g:vimtex_view_general_options = '@line @pdf @tex'
+'''
