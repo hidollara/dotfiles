@@ -34,3 +34,6 @@ repo='prabirshrestha/vim-lsp'
 hook_add = '''
   let g:lsp_diagnostics_enabled = 0
 '''
+
+[[plugins]]
+repo='tpope/vim-surround'
