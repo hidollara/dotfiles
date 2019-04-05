@@ -18,6 +18,7 @@ zplug 'mollifier/cd-gitroot'
 zplug "paulirish/git-open", as:command, use:git-open
 zplug 'sindresorhus/pure', use:pure.zsh, as:theme, on:mafredri/zsh-async
 zplug 'hidollara/tmux-template', as:command, use:'(*).sh', rename-to:'$1', if:'command -v tmux >/dev/null'
+zplug 'hidollara/d23780028ad45da691be9b77b4f4f4b3', from:gist, use:tomorrow-night-eighties.sh
 zplug 'zsh-users/zsh-autosuggestions'
 zplug 'zsh-users/zsh-completions'
 zplug 'zsh-users/zsh-syntax-highlighting', defer:2
