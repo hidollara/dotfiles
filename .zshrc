@@ -9,7 +9,6 @@ fi
 source "$ZPLUG_HOME/init.zsh"
 
 zplug 'b4b4r07/enhancd', use:init.sh
-zplug 'b4b4r07/gist', as:command, hook-build:'go get -d && go build', use:gist
 zplug 'b4b4r07/httpstat', as:command, use:'(*).sh', rename-to:'$1'
 zplug 'junegunn/fzf', as:command, use:bin/fzf-tmux, if:'command -v tmux >/dev/null'
 zplug 'junegunn/fzf-bin', as:command, from:gh-r, rename-to:fzf
