@@ -40,3 +40,9 @@ repo='tpope/vim-surround'
 
 [[plugins]]
 repo='itchyny/lightline.vim'
+hook_add = '''
+  set noshowmode
+  let g:lightline = {
+  \ 'colorscheme': 'Tomorrow_Night_Eighties'
+  \ }
+'''

@@ -25,7 +25,6 @@ syntax enable
 set autoindent
 set autoread
 set backspace=indent,eol,start
-set cmdheight=2
 set expandtab
 set hlsearch
 set incsearch
