@@ -10,3 +10,5 @@ fi
 install_if_not_installed zsh
 install_if_not_installed tmux
 install_if_not_installed vim
+
+unset -f install_if_not_installed
