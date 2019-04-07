@@ -4,7 +4,7 @@ EXCLUSIONS := .DS_Store .git
 DOTFILES   := $(filter-out $(EXCLUSIONS), $(CANDIDATES))
 
 .DEFAULT_GOAL := help
-.PHONY: help
+.PHONY: list init deploy update clean help
 
 list: ## Show dotfiles in this repository
 	@$(foreach val, $(DOTFILES), ls -dF $(val);)
