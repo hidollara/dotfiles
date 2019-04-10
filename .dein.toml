@@ -11,9 +11,6 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = 'cespare/vim-toml'
-
-[[plugins]]
 repo = 'roxma/nvim-yarp'
 on_if = '!has("nvim")'
 
