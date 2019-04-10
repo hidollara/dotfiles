@@ -5,3 +5,10 @@ hook_source = '''
   let g:vimtex_view_general_viewer = 'displayline'
   let g:vimtex_view_general_options = '@line @pdf @tex'
 '''
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+on_event = 'InsertEnter'
+hook_add = '''
+  let g:deoplete#enable_at_startup = 1
+'''
