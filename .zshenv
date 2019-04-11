@@ -12,6 +12,8 @@ export XDG_CACHE_HOME="${XDG_CACHE_HOME:=$HOME/.cache}"
 export XDG_DATA_HOME="${XDG_DATA_HOME:=$HOME/.local/share}"
 export GOPATH="$HOME/go/package:$HOME/go/workspace"
 
+source "$XDG_CONFIG_HOME/colorscheme/tomorrow-night-eighties"
+
 typeset -gU cdpath fpath mailpath path
 path=(
   $HOME/go/{package,workspace}/bin
