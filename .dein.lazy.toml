@@ -11,6 +11,10 @@ hook_source = '''
 '''
 
 [[plugins]]
+repo = 'mattn/emmet-vim'
+on_ft = ['html']
+
+[[plugins]]
 repo = 'Shougo/deoplete.nvim'
 on_event = ['InsertEnter']
 hook_add = '''
