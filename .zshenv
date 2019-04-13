@@ -13,6 +13,7 @@ export XDG_DATA_HOME="${XDG_DATA_HOME:=$HOME/.local/share}"
 export GOPATH="$HOME/go/package:$HOME/go/workspace"
 
 source "$XDG_CONFIG_HOME/colorscheme/tomorrow-night-eighties"
+source "$XDG_CONFIG_HOME/colorscheme/bin/colorize"
 
 typeset -gU cdpath fpath mailpath path
 path=(
