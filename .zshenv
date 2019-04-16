@@ -15,8 +15,13 @@ export GOPATH="$HOME/go/package:$HOME/go/workspace"
 source "$XDG_CONFIG_HOME/colorscheme/tomorrow-night-eighties"
 source "$XDG_CONFIG_HOME/colorscheme/bin/colorize"
 
+setopt no_global_rcs
+
 typeset -gU cdpath fpath mailpath path
+
+[ -x /usr/libexec/path_helper ] && eval `/usr/libexec/path_helper -s`
 path=(
+  $HOME/bin
   $HOME/go/{package,workspace}/bin
   /usr/local/{bin,sbin}
   $path
