@@ -2,7 +2,7 @@ if command -v tmux >/dev/null && [[ -z "$TMUX" ]]; then
   tmux attach || tmux new-session; exit
 fi
 
-if [[ ! -f "$HOME/.zshrc.zwc" || $(readlink "$HOME/.zshrc") -nt "$HOME/.zshrc.zwc" ]]; then
+if [[ ! -f "$HOME/.zshrc.zwc" || $(readlink "$HOME/.zshrc" || echo "$HOME/.zshrc") -nt "$HOME/.zshrc.zwc" ]]; then
   zcompile "$HOME/.zshrc"
 fi
 
