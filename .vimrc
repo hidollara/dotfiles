@@ -32,6 +32,7 @@ set laststatus=2
 set list
 set listchars=tab:>\ ,trail:-
 set number
+set ruler
 set shiftwidth=2
 set showcmd
 set smartindent
@@ -39,6 +40,6 @@ set softtabstop=2
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
 set tabstop=2
 set updatetime=250
-set ruler
+let &viminfo = &viminfo . ',n' . $XDG_CACHE_HOME . '/.viminfo'
 set whichwrap=b,s,h,l,<,>,[,],~
 set wildmenu
