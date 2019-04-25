@@ -5,9 +5,9 @@ if [[ "$OSTYPE" == darwin* ]]; then
   if [[ -n $battery_info ]]; then
     local battery_quantity="$(echo $battery_info | awk '{print $1}')"
     if [[ ! $battery_info =~ "discharging" ]]; then
-      echo "+ $battery_quantity%"
+      echo "#[fg=yellow]+ #[fg=green]$battery_quantity%#[default]"
     elif (( $battery_quantity <= 20 )); then
-      echo "\e[31m$battery_quantity%\e[0m"
+      echo "#[fg=red]$battery_quantity%#[default]"
     else
       echo "$battery_quantity%"
     fi
