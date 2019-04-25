@@ -31,6 +31,7 @@ zplug load
 autoload -U compinit; compinit -d "$XDG_CACHE_HOME/.zcompdump"
 setopt histignorealldups
 
+export ENHANCD_DIR="$XDG_CACHE_HOME"
 export ENHANCD_DISABLE_HOME=1
 export ENHANCD_DISABLE_DOT=1
 export ENHANCD_HOOK_AFTER_CD=ls
