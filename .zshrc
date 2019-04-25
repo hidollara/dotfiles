@@ -28,7 +28,7 @@ zplug 'zsh-users/zsh-syntax-highlighting', defer:2
 if ! zplug check; then zplug install; fi
 zplug load
 
-autoload -U compinit; compinit
+autoload -U compinit; compinit -d "$XDG_CACHE_HOME/.zcompdump"
 setopt histignorealldups
 
 export ENHANCD_DISABLE_HOME=1
