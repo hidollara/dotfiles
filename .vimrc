@@ -1,4 +1,4 @@
-let s:dein_dir = $HOME . '/.cache/dein'
+let s:dein_dir = $XDG_CACHE_HOME . '/dein'
 let s:dein_body = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 if &runtimepath !~# '/dein.vim'
   if !isdirectory(s:dein_body)
