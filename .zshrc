@@ -48,3 +48,7 @@ fsd() {
   local dir
   dir=$(grep "$1" -rl "${2:-.}"| fzf --preview "cat {}| grep --color=always -E \"$1|$\"" ) && cd "$dir" || exit
 }
+
+mkdcd() {
+  mkdir $1 && cd $1
+}
