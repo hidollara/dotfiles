@@ -12,6 +12,11 @@ export TERM='xterm-256color'
 export LSCOLORS='exfxcxdxbxegedabagacad'
 export GREP_COLOR='0;31'
 export GOPATH="$HOME/go/package:$HOME/go/workspace"
+export ZPLUG_HOME="$XDG_CACHE_HOME/zplug"
+export ENHANCD_DIR="$XDG_CACHE_HOME"
+export ENHANCD_DISABLE_HOME=1
+export ENHANCD_DISABLE_DOT=1
+export ENHANCD_HOOK_AFTER_CD=ls
 
 setopt no_global_rcs
 

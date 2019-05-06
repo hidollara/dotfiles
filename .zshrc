@@ -6,7 +6,6 @@ if [[ ! -f "$HOME/.zshrc.zwc" || $(readlink "$HOME/.zshrc" || echo "$HOME/.zshrc
   zcompile "$HOME/.zshrc"
 fi
 
-export ZPLUG_HOME="$XDG_CACHE_HOME/zplug"
 if [[ ! -d "$ZPLUG_HOME" ]]; then
   git clone https://github.com/zplug/zplug "$ZPLUG_HOME"
 fi
@@ -30,11 +29,6 @@ zplug load
 
 autoload -U compinit; compinit -d "$XDG_CACHE_HOME/.zcompdump"
 setopt histignorealldups
-
-export ENHANCD_DIR="$XDG_CACHE_HOME"
-export ENHANCD_DISABLE_HOME=1
-export ENHANCD_DISABLE_DOT=1
-export ENHANCD_HOOK_AFTER_CD=ls
 
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
