@@ -1,5 +1,3 @@
-source $COLORSCHEME_FILE
-
 colorcode_to_rgbspec() {
   echo "$1"| sed -E 's/^#([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/rgb:\1\/\2\/\3/'
 }
