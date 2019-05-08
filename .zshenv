@@ -25,6 +25,7 @@ typeset -gU cdpath fpath mailpath path
 
 [ -x /usr/libexec/path_helper ] && eval `/usr/libexec/path_helper -s`
 path=(
+  /home/linuxbrew/.linuxbrew/{bin,sbin}(N-/)
   $HOME/bin
   $HOME/go/{package,workspace}/bin
   /usr/local/{bin,sbin}
