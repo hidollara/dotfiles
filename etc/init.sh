@@ -15,7 +15,7 @@ fi
 
 # brew install
 brew bundle --global
-[[ "$OSTYPE" == darwin* ]] && brew bundle --file="$DOTPATH/etc/brew/darwin/core" >/dev/null
+[[ "$OSTYPE" == darwin* ]] && brew bundle --file="$DOTPATH/etc/brew/darwin/core"
 [[ "$OSTYPE" == darwin* ]] && brew bundle --file="$DOTPATH/etc/brew/darwin/opt" >/dev/null &
 
 # chsh
