@@ -19,6 +19,7 @@ zplug 'mafredri/zsh-async', use:async.zsh
 zplug 'mollifier/cd-gitroot'
 zplug "paulirish/git-open", as:command, use:git-open
 zplug 'sindresorhus/pure', use:pure.zsh, as:theme, on:mafredri/zsh-async
+zplug "stedolan/jq", as:command, from:gh-r
 zplug 'hidollara/tmux-template', as:command, use:'(*).sh', rename-to:'$1', if:'command -v tmux >/dev/null'
 zplug 'zsh-users/zsh-autosuggestions'
 zplug 'zsh-users/zsh-completions'
