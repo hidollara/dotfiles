@@ -1,0 +1,11 @@
+cask "discord"
+cask "google-chrome"
+cask "homebrew/cask-versions/sequel-pro-nightly"
+cask "intellij-idea"
+cask "java"
+cask "mactex-no-gui"
+cask "microsoft-office"
+cask "skim"
+cask "visual-studio-code"
+mas "Night Owl", id: 428834068
+mas "Xcode", id: 497799835
