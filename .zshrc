@@ -29,7 +29,6 @@ if ! zplug check; then zplug install; fi
 zplug load
 
 autoload -U compinit; compinit -d "$XDG_CACHE_HOME/.zcompdump"
-setopt histignorealldups
 
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
@@ -52,4 +51,8 @@ fsd() {
 
 mkdcd() {
   mkdir $1 && cd $1
+}
+
+showoptions() {
+  set -o | sed -e 's/^no\(.*\)on$/\1  off/' -e 's/^no\(.*\)off$/\1  on/'
 }

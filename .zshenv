@@ -19,7 +19,9 @@ export ENHANCD_DISABLE_DOT=1
 export ENHANCD_HOOK_AFTER_CD=ls
 source "$XDG_CONFIG_HOME/colorscheme/tomorrow-night-eighties"
 
-setopt no_global_rcs
+setopt hist_ignore_all_dups
+unsetopt flow_control
+unsetopt global_rcs
 
 typeset -gU cdpath fpath mailpath path
 
