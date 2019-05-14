@@ -54,3 +54,9 @@ hook_add = '''
   \ 'colorscheme': 'Tomorrow_Night_Eighties'
   \ }
 '''
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+hook_add = '''
+  let g:NERDTreeShowHidden=1
+'''
