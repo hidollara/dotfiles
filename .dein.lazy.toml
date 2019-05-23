@@ -3,6 +3,14 @@ repo = 'cespare/vim-toml'
 on_ft = ['toml']
 
 [[plugins]]
+repo = 'leafgarland/typescript-vim'
+on_ft = ['typescript']
+
+[[plugins]]
+repo = 'Quramy/tsuquyomi'
+on_ft = ['typescript']
+
+[[plugins]]
 repo = 'lervag/vimtex'
 on_ft = ['tex']
 hook_source = '''
