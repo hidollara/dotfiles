@@ -37,6 +37,7 @@ alias l='ls'
 alias mkdir='mkdir -p'
 alias rm='rm -r'
 alias gitcd='cd-gitroot'
+eval $(hub alias -s)
 
 fd() {
   local dir

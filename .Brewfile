@@ -7,6 +7,7 @@ brew "direnv"
 brew "gcc"
 brew "git"
 brew "go"
+brew "hub"
 brew "mysql", restart_service: true
 brew "nkf"
 brew "node"
