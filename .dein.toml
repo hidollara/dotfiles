@@ -51,3 +51,6 @@ repo = 'scrooloose/nerdtree'
 hook_add = '''
   let g:NERDTreeShowHidden=1
 '''
+
+[[plugins]]
+repo = 'skanehira/translate.vim'
