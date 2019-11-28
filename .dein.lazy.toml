@@ -26,3 +26,10 @@ hook_source = '''
 [[plugins]]
 repo = 'mattn/emmet-vim'
 on_ft = ['html']
+
+[[plugins]]
+repo = 'ElmCast/elm-vim'
+on_ft = ['elm']
+hook_source = '''
+  let g:elm_setup_keybindings = 0
+'''
