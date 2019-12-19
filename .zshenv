@@ -1,4 +1,4 @@
-if [[ -z "$LANG" ]]; then export LANG='en_US.UTF-8'; fi
+if [[ -z "$LANG" ]]; then export LANG='ja_JP.UTF-8'; fi
 if [[ "$OSTYPE" == darwin* ]]; then export BROWSER='open'; fi
 
 export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:=$HOME/.config}"
@@ -25,6 +25,11 @@ export ENHANCD_HOOK_AFTER_CD=ls
 setopt hist_ignore_all_dups
 unsetopt flow_control
 unsetopt global_rcs
+
+if [[ -t 0 ]]; then
+  stty stop undef
+  stty start undef
+fi
 
 typeset -gU cdpath fpath mailpath path
 

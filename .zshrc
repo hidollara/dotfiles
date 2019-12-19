@@ -32,7 +32,8 @@ autoload -U compinit; compinit -d "$XDG_CACHE_HOME/.zcompdump"
 
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
-alias ls='ls -AGF'
+alias vi='vim'
+alias ls='ls -AGF --color=auto'
 alias l='ls'
 alias mkdir='mkdir -p'
 alias rm='rm -r'
