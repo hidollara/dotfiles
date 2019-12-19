@@ -16,7 +16,10 @@ export TERM='xterm-256color'
 export LSCOLORS='exfxcxdxbxegedabagacad'
 source "$XDG_CONFIG_HOME/colorscheme/tomorrow-night-eighties"
 
-export ZPLUG_HOME="$XDG_CACHE_HOME/zplug"
+declare -A ZPLGM
+ZPLGM[BIN_DIR]="$XDG_CACHE_HOME/zplugin/bin"
+ZPLGM[HOME_DIR]="$XDG_CACHE_HOME/zplugin"
+ZPLGM[ZCOMPDUMP_PATH]="$XDG_CACHE_HOME/.zcompdump"
 export ENHANCD_DIR="$XDG_CACHE_HOME"
 export ENHANCD_DISABLE_HOME=1
 export ENHANCD_DISABLE_DOT=1

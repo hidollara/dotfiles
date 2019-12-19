@@ -6,29 +6,25 @@ if [[ ! -f "$HOME/.zshrc.zwc" || $(readlink "$HOME/.zshrc" || echo "$HOME/.zshrc
   zcompile "$HOME/.zshrc"
 fi
 
-if [[ ! -d "$ZPLUG_HOME" ]]; then
-  git clone https://github.com/zplug/zplug "$ZPLUG_HOME"
+if [[ ! -d "$ZPLGM[BIN_DIR]" ]]; then
+  git clone https://github.com/zdharma/zplugin "$ZPLGM[BIN_DIR]"
 fi
-source "$ZPLUG_HOME/init.zsh"
+source "$ZPLGM[BIN_DIR]/zplugin.zsh"
+autoload -Uz _zplugin
+(( ${+_comps} )) && _comps[zplugin]=_zplugin
 
-zplug 'b4b4r07/enhancd', use:init.sh
-zplug 'b4b4r07/httpstat', as:command, use:'(*).sh', rename-to:'$1'
-zplug 'junegunn/fzf', as:command, use:bin/fzf-tmux, if:'command -v tmux >/dev/null'
-zplug 'junegunn/fzf-bin', as:command, from:gh-r, rename-to:fzf
-zplug 'mafredri/zsh-async', use:async.zsh
-zplug 'mollifier/cd-gitroot'
-zplug "paulirish/git-open", as:command, use:git-open
-zplug 'sindresorhus/pure', use:pure.zsh, as:theme, on:mafredri/zsh-async
-zplug "stedolan/jq", as:command, from:gh-r
-zplug 'hidollara/tmux-template', as:command, use:'(*).sh', rename-to:'$1', if:'command -v tmux >/dev/null'
-zplug 'zsh-users/zsh-autosuggestions'
-zplug 'zsh-users/zsh-completions'
-zplug 'zsh-users/zsh-syntax-highlighting', defer:2
+zplugin light "zsh-users/zsh-autosuggestions"
+zplugin light "zsh-users/zsh-completions"
+zplugin light "zsh-users/zsh-syntax-highlighting"
+zplugin ice pick"async.zsh" src"pure.zsh"; zplugin light "sindresorhus/pure"
+zplugin ice from"gh-r" bpick"*linux64*" mv"jq-* -> jq" as"program"; zplugin light "stedolan/jq"
+zplugin ice from"gh-r" as"program"; zplugin light "junegunn/fzf-bin"
+zplugin ice pick"init.sh"; zplugin light "b4b4r07/enhancd"
+zplugin ice as"program" mv"httpstat.sh -> httpstat" pick"httpstat"; zplugin light "b4b4r07/httpstat"
+zplugin light "mollifier/cd-gitroot"
+zplugin ice as"program" pick"git-open"; zplugin light "paulirish/git-open"
 
-if ! zplug check; then zplug install; fi
-zplug load
-
-autoload -U compinit; compinit -d "$XDG_CACHE_HOME/.zcompdump"
+autoload -U compinit; compinit -d "$ZPLGM[ZCOMPDUMP_PATH]"
 
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
