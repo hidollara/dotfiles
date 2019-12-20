@@ -29,8 +29,8 @@ autoload -U compinit; compinit -d "$ZPLGM[ZCOMPDUMP_PATH]"
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 alias vi='vim'
-alias ls='ls -AGF --color=auto'
-alias l='ls'
+alias l='command ls -F --color=auto'
+alias ls='command ls -AGF --color=auto'
 alias mkdir='mkdir -p'
 alias rm='rm -r'
 alias gitcd='cd-gitroot'
