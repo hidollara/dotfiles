@@ -17,8 +17,8 @@ export LSCOLORS='exfxcxdxbxegedabagacad'
 source "$XDG_CONFIG_HOME/colorscheme/tomorrow-night-eighties"
 
 declare -A ZPLGM
-ZPLGM[BIN_DIR]="$XDG_CACHE_HOME/zplugin/bin"
-ZPLGM[HOME_DIR]="$XDG_CACHE_HOME/zplugin"
+ZPLGM[BIN_DIR]="$XDG_DATA_HOME/zplugin/bin"
+ZPLGM[HOME_DIR]="$XDG_DATA_HOME/zplugin"
 ZPLGM[ZCOMPDUMP_PATH]="$XDG_CACHE_HOME/.zcompdump"
 export ENHANCD_DIR="$XDG_CACHE_HOME"
 export ENHANCD_DISABLE_HOME=1
@@ -36,12 +36,13 @@ fi
 
 typeset -gU cdpath fpath mailpath path
 
-export GOPATH="$HOME/go/package:$HOME/go/workspace"
+export CARGO_HOME="$XDG_DATA_HOME/cargo"
+export GOPATH="$XDG_DATA_HOME/go/package:$XDG_DATA_HOME/go/workspace"
 [ -x /usr/libexec/path_helper ] && eval `/usr/libexec/path_helper -s`
 path=(
   /home/linuxbrew/.linuxbrew/{bin,sbin}(N-/)
-  $HOME/bin
-  $HOME/go/{package,workspace}/bin
+  $XDG_DATA_HOME/bin
+  $XDG_DATA_HOME/go/{package,workspace}/bin
   /usr/local/{bin,sbin}
   $path
 )
