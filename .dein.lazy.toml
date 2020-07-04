@@ -1,22 +1,21 @@
 [[plugins]]
-repo = 'cespare/vim-toml'
-on_ft = ['toml']
+on_ft = ['elm']
+repo = 'ElmCast/elm-vim'
+hook_source = '''
+  let g:elm_setup_keybindings = 0
+'''
 
 [[plugins]]
-repo = 'leafgarland/typescript-vim'
-on_ft = ['typescript']
+on_ft = ['html']
+repo = 'mattn/emmet-vim'
 
 [[plugins]]
-repo = 'Quramy/tsuquyomi'
-on_ft = ['typescript']
-
-[[plugins]]
-repo = 'udalov/kotlin-vim'
 on_ft = ['kotlin']
+repo = 'udalov/kotlin-vim'
 
 [[plugins]]
-repo = 'lervag/vimtex'
 on_ft = ['tex']
+repo = 'lervag/vimtex'
 hook_source = '''
   let g:vimtex_view_general_viewer = 'displayline'
   let g:vimtex_view_general_options = '@line @pdf @tex'
@@ -24,12 +23,5 @@ hook_source = '''
 '''
 
 [[plugins]]
-repo = 'mattn/emmet-vim'
-on_ft = ['html']
-
-[[plugins]]
-repo = 'ElmCast/elm-vim'
-on_ft = ['elm']
-hook_source = '''
-  let g:elm_setup_keybindings = 0
-'''
+on_ft = ['toml']
+repo = 'cespare/vim-toml'

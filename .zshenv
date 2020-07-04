@@ -14,7 +14,6 @@ export LESSHISTFILE="$XDG_CACHE_HOME/.lesshst"
 export GREP_COLOR='0;31'
 export TERM='xterm-256color'
 export LSCOLORS='exfxcxdxbxegedabagacad'
-source "$XDG_CONFIG_HOME/colorscheme/tomorrow-night-eighties"
 
 declare -A ZPLGM
 ZPLGM[BIN_DIR]="$XDG_DATA_HOME/zplugin/bin"
@@ -36,12 +35,14 @@ fi
 
 typeset -gU cdpath fpath mailpath path
 
-export CARGO_HOME="$XDG_DATA_HOME/cargo"
+export CARGO_HOME="$HOME/.cargo"
+export RUSTUP_HOME="$HOME/.rustup"
 export GOPATH="$XDG_DATA_HOME/go/package:$XDG_DATA_HOME/go/workspace"
 [ -x /usr/libexec/path_helper ] && eval `/usr/libexec/path_helper -s`
 path=(
   /home/linuxbrew/.linuxbrew/{bin,sbin}(N-/)
   $XDG_DATA_HOME/bin
+  $CARGO_HOME/bin
   $XDG_DATA_HOME/go/{package,workspace}/bin
   /usr/local/{bin,sbin}
   $path

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 tmpfile=$(mktemp) && trap "rm -f $tmpfile" EXIT
 hub api -X GET /user/repos > $tmpfile
