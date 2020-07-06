@@ -12,7 +12,6 @@ export LESS='-F -g -i -M -R -S -w -X -z-4'
 export LESSHISTFILE="$XDG_CACHE_HOME/.lesshst"
 
 export GREP_COLOR='0;31'
-export TERM='xterm-256color'
 export LSCOLORS='exfxcxdxbxegedabagacad'
 
 declare -A ZPLGM

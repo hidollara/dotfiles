@@ -25,3 +25,11 @@ hook_source = '''
 [[plugins]]
 on_ft = ['toml']
 repo = 'cespare/vim-toml'
+
+[[plugins]]
+on_ft = ['typescript']
+repo = 'leafgarland/typescript-vim'
+
+[[plugins]]
+on_ft = ['typescript.tsx']
+repo = 'peitalin/vim-jsx-typescript'

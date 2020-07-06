@@ -7,7 +7,6 @@ hook_add = '''
 [[plugins]]
 repo = 'scrooloose/nerdtree'
 hook_add = '''
-  autocmd VimEnter * execute 'NERDTree'
   let g:NERDTreeShowHidden=1
 '''
 
@@ -28,10 +27,9 @@ hook_add = '''
 repo = 'prabirshrestha/async.vim'
 
 [[plugins]]
-repo = 'prabirshrestha/vim-lsp'
-
-[[plugins]]
-repo = 'mattn/vim-lsp-settings'
+repo = 'neoclide/coc.nvim'
+merged = 0
+rev = 'release'
 
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
