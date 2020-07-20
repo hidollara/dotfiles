@@ -35,9 +35,11 @@ set number
 set ruler
 set shiftwidth=2
 set showcmd
+set signcolumn=yes
 set smartindent
 set softtabstop=2
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
+set statusline^=%{coc#status()}
 set tabstop=2
 set updatetime=250
 let &viminfo = &viminfo . ',n' . $XDG_CACHE_HOME . '/.viminfo'
