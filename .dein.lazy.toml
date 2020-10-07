@@ -3,6 +3,15 @@ on_ft = ['html']
 repo = 'mattn/emmet-vim'
 
 [[plugins]]
+on_ft = ['typescript']
+repo = 'leafgarland/typescript-vim'
+
+[[plugins]]
+on_ft = ['typescript']
+repo = 'Quramy/tsuquyomi'
+>>>>>>> master
+
+[[plugins]]
 on_ft = ['kotlin']
 repo = 'udalov/kotlin-vim'
 
