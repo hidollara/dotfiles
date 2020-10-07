@@ -8,6 +8,7 @@ hook_add = '''
 repo = 'scrooloose/nerdtree'
 hook_add = '''
   let g:NERDTreeShowHidden=1
+  nmap <Leader>d :NERDTreeToggle<CR>
 '''
 
 [[plugins]]
@@ -30,6 +31,10 @@ repo = 'prabirshrestha/async.vim'
 repo = 'neoclide/coc.nvim'
 merged = 0
 rev = 'release'
+hook_add = '''
+  nmap <Space> :<C-u>call CocAction('doHover')<CR>
+  nmap <Leader>rn <Plug>(coc-rename)
+'''
 
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
@@ -40,3 +45,6 @@ hook_add = '''
   highlight GitGutterChange ctermfg=yellow
   highlight GitGutterDelete ctermfg=red
 '''
+
+[[plugins]]
+repo = 'liuchengxu/vista.vim'

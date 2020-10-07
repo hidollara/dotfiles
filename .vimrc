@@ -30,7 +30,7 @@ set hlsearch
 set incsearch
 set laststatus=2
 set list
-set listchars=tab:>\ ,trail:-
+set listchars=tab:\ \ ,trail:-
 set number
 set ruler
 set shiftwidth=2

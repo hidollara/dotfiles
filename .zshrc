@@ -31,6 +31,7 @@ alias mkdir='mkdir -p'
 alias rm='rm -r'
 alias gitcd='cd-gitroot'
 eval $(hub alias -s)
+alias dc='docker-compose'
 
 showoptions() {
   set -o | sed -e 's/^no\(.*\)on$/\1  off/' -e 's/^no\(.*\)off$/\1  on/'
