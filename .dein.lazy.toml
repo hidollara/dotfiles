@@ -9,7 +9,6 @@ repo = 'leafgarland/typescript-vim'
 [[plugins]]
 on_ft = ['typescript']
 repo = 'Quramy/tsuquyomi'
->>>>>>> master
 
 [[plugins]]
 on_ft = ['kotlin']
