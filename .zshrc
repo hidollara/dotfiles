@@ -34,21 +34,7 @@ alias mkdir='mkdir -p'
 alias rm='rm -r'
 alias gitcd='cd-gitroot'
 eval $(hub alias -s)
-
-fd() {
-  local dir
-  dir=$(find "${1:-.}" -path "*/\.git*" -prune -o -type d 2> /dev/null| fzf) && cd "$dir" || exit
-}
-
-fsd() {
-  if [ -z "$1" ]; then echo 'Usage: fsd search-string [dir]'; return; fi
-  local dir
-  dir=$(grep "$1" -rl "${2:-.}"| fzf --preview "cat {}| grep --color=always -E \"$1|$\"" ) && cd "$dir" || exit
-}
-
-mkdcd() {
-  mkdir $1 && cd $1
-}
+alias dc='docker-compose'
 
 showoptions() {
   set -o | sed -e 's/^no\(.*\)on$/\1  off/' -e 's/^no\(.*\)off$/\1  on/'
