@@ -1,7 +1,7 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 hook_add = '''
-  let g:dein#auto_recach=1
+  let g:dein#auto_recache=1
 '''
 
 [[plugins]]
@@ -39,7 +39,6 @@ hook_add = '''
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
 hook_add = '''
-  let g:gitgutter_sign_column_always = 1
   highlight SignColumn ctermbg=none
   highlight GitGutterAdd ctermfg=green
   highlight GitGutterChange ctermfg=yellow
