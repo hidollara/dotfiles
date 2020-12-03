@@ -16,6 +16,7 @@
 	cancel = reset --soft HEAD^
 	glog = log --all --graph --pretty=\"%C(yellow)%h %C(green)%cr %C(red)%d %C(reset)%s\"
 	l = glog
+  pushu = push -u origin HEAD
 [fetch]
 	prune = true
 [merge]
