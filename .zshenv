@@ -39,7 +39,6 @@ export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 export GOPATH="$XDG_DATA_HOME/go/package:$XDG_DATA_HOME/go/workspace"
 [ -x /usr/libexec/path_helper ] && eval `/usr/libexec/path_helper -s`
 path=(
-  /home/linuxbrew/.linuxbrew/{bin,sbin}(N-/)
   $XDG_DATA_HOME/bin
   $CARGO_HOME/bin
   $XDG_DATA_HOME/go/{package,workspace}/bin
