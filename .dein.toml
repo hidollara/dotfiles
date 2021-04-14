@@ -33,6 +33,10 @@ merged = 0
 rev = 'release'
 hook_add = '''
   nmap <Space> :<C-u>call CocAction('doHover')<CR>
+  nmap gd <Plug>(coc-definition)
+  nmap gy <Plug>(coc-type-definition)
+  nmap gi <Plug>(coc-implementation)
+  nmap gr <Plug>(coc-references)
   nmap <Leader>rn <Plug>(coc-rename)
 '''
 
