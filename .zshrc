@@ -18,6 +18,7 @@ zinit as"program" cp"httpstat.sh -> httpstat" pick"httpstat" light-mode for "b4b
 zinit light "mollifier/cd-gitroot"
 zinit light "paulirish/git-open"
 zinit light "asdf-vm/asdf"
+zinit light "$XDG_DATA_HOME/bin"
 
 autoload -Uz compinit && compinit -d "$ZINIT[ZCOMPDUMP_PATH]"
 
@@ -34,7 +35,3 @@ alias rm='rm -r'
 alias gitcd='cd-gitroot'
 eval $(hub alias -s)
 alias dc='docker-compose'
-
-showoptions() {
-  set -o | sed -e 's/^no\(.*\)on$/\1  off/' -e 's/^no\(.*\)off$/\1  on/'
-}
