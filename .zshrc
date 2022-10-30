@@ -17,6 +17,7 @@ zinit light "b4b4r07/enhancd"
 zinit as"program" cp"httpstat.sh -> httpstat" pick"httpstat" light-mode for "b4b4r07/httpstat"
 zinit light "mollifier/cd-gitroot"
 zinit as"program" pick"git-open" light-mode for "paulirish/git-open"
+zinit light "asdf-vm/asdf"
 
 autoload -Uz compinit && compinit -d "$ZINIT[ZCOMPDUMP_PATH]"
 
