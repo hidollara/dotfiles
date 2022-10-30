@@ -14,10 +14,11 @@ export LESSHISTFILE="$XDG_CACHE_HOME/.lesshst"
 export GREP_COLOR='0;31'
 export LSCOLORS='exfxcxdxbxegedabagacad'
 
-declare -A ZPLGM
-ZPLGM[BIN_DIR]="$XDG_DATA_HOME/zplugin/bin"
-ZPLGM[HOME_DIR]="$XDG_DATA_HOME/zplugin"
-ZPLGM[ZCOMPDUMP_PATH]="$XDG_CACHE_HOME/.zcompdump"
+declare -A ZINIT
+ZINIT[BIN_DIR]="$XDG_DATA_HOME/zinit/zinit.git"
+ZINIT[HOME_DIR]="$XDG_DATA_HOME/zinit"
+ZINIT[ZCOMPDUMP_PATH]="$XDG_CACHE_HOME/.zcompdump"
+
 export ENHANCD_DIR="$XDG_CACHE_HOME"
 export ENHANCD_DISABLE_HOME=1
 export ENHANCD_DISABLE_DOT=1
