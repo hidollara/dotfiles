@@ -15,16 +15,6 @@ export BASE16_DEFAULT_THEME="tomorrow-night-eighties"
 export GREP_COLOR='0;31'
 export LSCOLORS='exfxcxdxbxegedabagacad'
 
-declare -A ZINIT
-ZINIT[BIN_DIR]="$XDG_DATA_HOME/zinit/zinit.git"
-ZINIT[HOME_DIR]="$XDG_DATA_HOME/zinit"
-ZINIT[ZCOMPDUMP_PATH]="$XDG_CACHE_HOME/.zcompdump"
-
-export ENHANCD_DIR="$XDG_CACHE_HOME"
-export ENHANCD_DISABLE_HOME=1
-export ENHANCD_DISABLE_DOT=1
-export ENHANCD_HOOK_AFTER_CD=ls
-
 setopt hist_ignore_all_dups
 unsetopt flow_control
 unsetopt global_rcs
@@ -36,14 +26,23 @@ fi
 
 typeset -gU cdpath fpath mailpath path
 
-export CARGO_HOME="$XDG_DATA_HOME/cargo"
+declare -A ZINIT
+ZINIT[BIN_DIR]="$XDG_DATA_HOME/zinit/zinit.git"
+ZINIT[HOME_DIR]="$XDG_DATA_HOME/zinit"
+ZINIT[ZCOMPDUMP_PATH]="$XDG_CACHE_HOME/.zcompdump"
+
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
-export GOPATH="$XDG_DATA_HOME/go/package:$XDG_DATA_HOME/go/workspace"
+export CARGO_HOME="$XDG_DATA_HOME/cargo"
+
+export ENHANCD_DIR="$XDG_CACHE_HOME"
+export ENHANCD_DISABLE_HOME=1
+export ENHANCD_DISABLE_DOT=1
+export ENHANCD_HOOK_AFTER_CD=ls
+
 [ -x /usr/libexec/path_helper ] && eval `/usr/libexec/path_helper -s`
 path=(
   $XDG_DATA_HOME/bin
   $CARGO_HOME/bin
-  $XDG_DATA_HOME/go/{package,workspace}/bin
   /usr/local/{bin,sbin}
   $path
 )
