@@ -35,11 +35,18 @@ repo = 'neoclide/coc.nvim'
 merged = 0
 rev = 'release'
 hook_add = '''
-  nmap <Space> :<C-u>call CocAction('doHover')<CR>
-  nmap gd <Plug>(coc-definition)
-  nmap gy <Plug>(coc-type-definition)
-  nmap gi <Plug>(coc-implementation)
-  nmap gr <Plug>(coc-references)
+  function! s:check_back_space() abort
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~# '\s'
+  endfunction
+
+  inoremap <silent><expr><TAB> coc#pum#visible() ? coc#pum#confirm() : <SID>check_back_space() ? "\<Tab>" : coc#refresh()
+
+  nmap <silent><Space> :<C-u>call CocActionAsync('doHover')<CR>
+  nmap <silent>gd <Plug>(coc-definition)
+  nmap <silent>gy <Plug>(coc-type-definition)
+  nmap <silent>gi <Plug>(coc-implementation)
+  nmap <silent>gr <Plug>(coc-references)
   nmap <Leader>rn <Plug>(coc-rename)
 '''
 
