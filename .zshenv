@@ -11,6 +11,7 @@ export PAGER='less'
 export LESS='-F -g -i -M -R -S -w -X -z-4'
 export LESSHISTFILE="$XDG_CACHE_HOME/.lesshst"
 
+export BASE16_DEFAULT_THEME="tomorrow-night-eighties"
 export GREP_COLOR='0;31'
 export LSCOLORS='exfxcxdxbxegedabagacad'
 

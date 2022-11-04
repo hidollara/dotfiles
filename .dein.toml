@@ -5,6 +5,16 @@ hook_add = '''
 '''
 
 [[plugins]]
+repo = 'chriskempson/base16-vim'
+hook_add = '''
+  if exists('$BASE16_THEME')
+      \ && (!exists('g:colors_name') || g:colors_name != 'base16-$BASE16_THEME')
+    let base16colorspace=256
+    colorscheme base16-$BASE16_THEME
+  endif
+'''
+
+[[plugins]]
 repo = 'scrooloose/nerdtree'
 hook_add = '''
   let g:NERDTreeShowHidden=1
@@ -42,12 +52,6 @@ hook_add = '''
 
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
-hook_add = '''
-  highlight SignColumn ctermbg=none
-  highlight GitGutterAdd ctermfg=green
-  highlight GitGutterChange ctermfg=yellow
-  highlight GitGutterDelete ctermfg=red
-'''
 
 [[plugins]]
 repo = 'liuchengxu/vista.vim'
