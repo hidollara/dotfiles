@@ -41,7 +41,6 @@ export ENHANCD_HOOK_AFTER_CD=ls
 
 [ -x /usr/libexec/path_helper ] && eval `/usr/libexec/path_helper -s`
 path=(
-  $XDG_DATA_HOME/bin
   $CARGO_HOME/bin
   /usr/local/{bin,sbin}
   $path
