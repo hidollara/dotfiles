@@ -30,3 +30,10 @@ hook_source = '''
 [[plugins]]
 on_ft = ['toml']
 repo = 'cespare/vim-toml'
+
+[[plugins]]
+on_ft = ['rust']
+repo = 'rust-lang/rust.vim'
+hook_source = '''
+  let g:rustfmt_autosave = 1
+'''
