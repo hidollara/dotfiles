@@ -8,6 +8,21 @@ hook_add = '''
 repo = 'chriskempson/base16-vim'
 
 [[plugins]]
+repo = 'itchyny/lightline.vim'
+hook_add = '''
+  let g:lightline = {
+    \ 'colorscheme': 'Tomorrow_Night_Eighties',
+    \ 'active': {},
+    \ 'inacvite': {},
+    \ 'component': {},
+    \ 'component_function': {},
+    \ }
+'''
+
+[[plugins]]
+repo = 'mhinz/vim-startify'
+
+[[plugins]]
 repo = 'scrooloose/nerdtree'
 hook_add = '''
   let g:NERDTreeShowHidden=1
@@ -15,43 +30,70 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = 'tpope/vim-surround'
+repo = 'tpope/vim-fugitive'
 
 [[plugins]]
-repo = 'tpope/vim-repeat'
-
-[[plugins]]
-repo = 'itchyny/lightline.vim'
-hook_add = '''
-  set noshowmode
-  let g:lightline = { 'colorscheme': 'Tomorrow_Night_Eighties' }
-'''
-
-[[plugins]]
-repo = 'prabirshrestha/async.vim'
+repo = 'airblade/vim-gitgutter'
 
 [[plugins]]
 repo = 'neoclide/coc.nvim'
 merged = 0
 rev = 'release'
 hook_add = '''
-  function! s:check_back_space() abort
+  function! s:check_backspace() abort
     let col = col('.') - 1
     return !col || getline('.')[col - 1]  =~# '\s'
   endfunction
 
-  inoremap <silent><expr><TAB> coc#pum#visible() ? coc#pum#confirm() : <SID>check_back_space() ? "\<Tab>" : coc#refresh()
+  inoremap <silent><expr><TAB> coc#pum#visible() ? coc#pum#next(1) : <SID>check_backspace() ? "\<Tab>" : coc#refresh()
+  inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+  inoremap <silent><expr><CR> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
-  nmap <silent><Space> :<C-u>call CocActionAsync('doHover')<CR>
+  nmap <silent>[d <Plug>(coc-diagnostic-prev)
+  nmap <silent>]d <Plug>(coc-diagnostic-next)
+
   nmap <silent>gd <Plug>(coc-definition)
   nmap <silent>gy <Plug>(coc-type-definition)
   nmap <silent>gi <Plug>(coc-implementation)
   nmap <silent>gr <Plug>(coc-references)
-  nmap <Leader>rn <Plug>(coc-rename)
+
+  nnoremap <silent><Space> :<C-u>call CocActionAsync('doHover')<CR>
+  autocmd CursorHold * silent call CocActionAsync('highlight')
+
+  nmap <leader>rn <Plug>(coc-rename)
+
+  nmap <leader>a <Plug>(coc-codeaction)
+  nmap <leader>qf <Plug>(coc-fix-current)
+  nmap <leader>cl <Plug>(coc-codelens-action)
+
+  xmap if <Plug>(coc-funcobj-i)
+  omap if <Plug>(coc-funcobj-i)
+  xmap af <Plug>(coc-funcobj-a)
+  omap af <Plug>(coc-funcobj-a)
+  xmap ic <Plug>(coc-classobj-i)
+  omap ic <Plug>(coc-classobj-i)
+  xmap ac <Plug>(coc-classobj-a)
+  omap ac <Plug>(coc-classobj-a)
+
+  if has('nvim-0.4.0') || has('patch-8.2.0750')
+    nnoremap <silent><nowait><expr><C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+    nnoremap <silent><nowait><expr><C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+    inoremap <silent><nowait><expr><C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
+    inoremap <silent><nowait><expr><C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
+    vnoremap <silent><nowait><expr><C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+    vnoremap <silent><nowait><expr><C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+  endif
+
+  nnoremap <silent><nowait><space>a :<C-u>CocList diagnostics<cr>
+  nnoremap <silent><nowait><space>o :<C-u>CocList outline<cr>
+  nnoremap <silent><nowait><space>s :<C-u>CocList -I symbols<cr>
 '''
 
 [[plugins]]
-repo = 'airblade/vim-gitgutter'
+repo = 'liuchengxu/vista.vim'
 
 [[plugins]]
-repo = 'liuchengxu/vista.vim'
+repo = 'tpope/vim-surround'
+
+[[plugins]]
+repo = 'tpope/vim-repeat'
